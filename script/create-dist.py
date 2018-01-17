@@ -88,6 +88,9 @@ def main():
   rm_rf(DIST_DIR)
   os.makedirs(DIST_DIR)
 
+  if get_target_arch() == 'mips64el':
+    TARGET_BINARIES[PLATFORM] += 'libchromium_sqlite3.so'
+
   force_build()
   create_symbols()
   copy_binaries()

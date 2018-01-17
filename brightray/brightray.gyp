@@ -165,6 +165,13 @@
                 ],
               },
             }],
+            ['target_arch=="mips64el"', {
+              'link_settings': {
+                'libraries': [
+                  '<(libchromiumcontent_dir)/libchromium_sqlite3.so',
+                ],
+              },
+            }],
           ],
         }],  # OS=="linux"
         ['OS=="mac"', {
